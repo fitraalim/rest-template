@@ -10,6 +10,8 @@ Refer to ```application.properties``` if you want to change the resource.
 jsonplaceholder.url = https://jsonplaceholder.typicode.com/comments/
 ```
 
+You may need to adjust ```Comment.java```.
+
 ## Instruction
 
 To try the application:
