@@ -16,10 +16,10 @@ jobs:
             docker push $IMAGE_NAME:latest
 workflows:
   version: 2
-  build-master:
+  build-main:
     jobs:
       - build:
           context: docker-context
           filters:
             branches:
-              only: master
+              only: main
