@@ -1,15 +1,23 @@
 version: 2.1
+
 jobs:
   build:
     environment:
       IMAGE_NAME: fitraalim/spring-boot-rest-template-example
     docker:
-      - image: circleci/buildpack-deps:stretch
+      - image: circleci/openjdk:11-jdk-buster
+    working_directory: ~/spring-boot-rest-template-example
     steps:
       - checkout
       - setup_remote_docker
       - run:
-          name: Build Docker image
+          name: Maven Dependency
+          command:  mvn dependency:go-offline
+      - run:
+          name: Maven Build
+          command:  mvn clean package
+      - run:
+          name: Push Container Image
           command: |
             docker build -t $IMAGE_NAME:latest .
             docker login -u $DOCKER_LOGIN -p $DOCKER_PWD
@@ -22,4 +30,5 @@ workflows:
           context: docker-context
           filters:
             branches:
-              only: main
+              only:
+                - main
