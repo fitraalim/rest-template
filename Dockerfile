@@ -1,4 +1,4 @@
-FROM amazoncorretto:11.0.11-alpine
+FROM amazoncorretto:11.0.12-alpine
 COPY startup.sh startup.sh
 RUN chmod +x startup.sh
 COPY ./target/rest-template-0.0.1.jar /usr/app/
