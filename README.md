@@ -1,6 +1,6 @@
 # Spring Boot REST Template Example
 
-![CircleCI](https://img.shields.io/circleci/build/github/fitraalim/spring-boot-rest-template-example/main?style=for-the-badge) [![Docker Repository on Quay](https://quay.io/repository/fitraalim/rest-template/status "Docker Repository on Quay")](https://quay.io/repository/fitraalim/rest-template)
+![CircleCI](https://img.shields.io/circleci/build/github/fitraalim/rest-template/main?style=for-the-badge) [![Docker Repository on Quay](https://quay.io/repository/fitraalim/rest-template/status "Docker Repository on Quay")](https://quay.io/repository/fitraalim/rest-template)
 
 Example of Spring Boot application that consumes REST API. In this example, the application consumes fake REST API from JSONPlaceholder (https://jsonplaceholder.typicode.com). JSONPlaceholder has 6 common resources that can be used. Here, I am using ```/comments``` resource.
 
