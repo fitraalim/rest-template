@@ -24,7 +24,7 @@ jobs:
             docker push $IMAGE_NAME:latest
 workflows:
   version: 2
-  build-main:
+  rest-template-build-main:
     jobs:
       - build:
           context: quay-context
